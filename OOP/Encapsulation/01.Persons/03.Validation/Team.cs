@@ -20,9 +20,9 @@ namespace PersonsInfo
 
         public Team(string name)
         {
-            this.name = name;
-            this.firstTeam = new List<Person>();
-            this.reserveTeam = new List<Person>();
+            Name = name;
+            firstTeam = new List<Person>();
+            reserveTeam = new List<Person>();
         }
 
         public void AddPlayer(Person player)
@@ -35,17 +35,6 @@ namespace PersonsInfo
             {
                 reserveTeam.Add(player);
             }
-        }
-
-
-        public override string ToString()
-        {
-            StringBuilder sb = new StringBuilder();
-
-            sb.AppendLine($"First team has {firstTeam.Count} players.");
-            sb.AppendLine($"Reserve team has {reserveTeam.Count} players.");
-
-            return sb.ToString().Trim();
         }
     }
 }
