@@ -38,7 +38,7 @@ namespace Exc03.Telephony
             foreach (var website in websites)
             {
                 Smartphone smartphone = new Smartphone(website);
-                if (smartphone is IBrowsable)
+                if (smartphone is IBrowseable)
                 {
                     Console.WriteLine(smartphone.Browse());
                 }
